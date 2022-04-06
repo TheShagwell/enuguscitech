@@ -65,8 +65,8 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
                             </div> -->
             </div>
             <!-- If we need navigation buttons -->
-            <!-- <div class="swiper-button-prev slide-prev"><i class="far fa-long-arrow-left"></i></div>
-                        <div class="swiper-button-next slide-next"><i class="far fa-long-arrow-right"></i></div> -->
+            <div class="swiper-button-prev slide-prev"><i class="far fa-long-arrow-left"></i></div>
+                        <div class="swiper-button-next slide-next"><i class="far fa-long-arrow-right"></i></div>
         </div>
     </section>
     <!-- hero area end here -->
