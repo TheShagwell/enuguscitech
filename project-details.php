@@ -1,8 +1,24 @@
-<?php require_once './inc/header.php'; ?>
+<?php $page="projects"; require_once './inc/header.php'; 
+require_once 'superadmin/MYSQLi/wbtml.php';
+
+if (isset($_GET['project'])) {
+    $project = $_GET['project'];
+    $project_title = RETURN_URL($project);
+
+    $projects = EXECUTE_QUERY(SELECT_WHERE("projects", "project_title", $project_title));
+    foreach ($projects as $project) {
+        extract($project);
+    }
+
+}
+
+
+
+?>  
 
 <main>
     <!-- breadcrumb area start -->
-    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/breadcrumb-bg-1.jpg">
+    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="https://cdn.pixabay.com/photo/2020/03/18/06/54/smartphone-4942918__340.jpg" style="background-image: url(https://cdn.pixabay.com/photo/2020/03/18/06/54/smartphone-4942918__340.jpg">
         <div class="tp-custom-container">
             <div class="row">
                 <div class="col-12">
@@ -33,69 +49,41 @@
                         <div class="tp-faqs-left-sidebar mb-30">
                             <h4 class="tp-faqs-left-sidebar-title">Project Info</h4>
                             <ul>
-                                <li>Name : <span>Daniel Samuels</span></li>
-                                <li>Date : <span>25 August, 2021</span></li>
-                                <li>Service : <span>Cleaning</span></li>
-                                <li>Budget : <span>$350-$420</span></li>
-                                <li>Feedback : <span>Happy Client</span></li>
+                                <li>By : <span><?= $handled_by; ?></span></li>
+                                <li>Date : <span><?= HUMAN_DATE($date_completed); ?></span></li>
+                                <li>Category : <span><?= $project_cat; ?></span></li>
                             </ul>
                         </div>
                         <div class="tp-faqs-left-img mb-30">
-                            <img src="assets/img/about/faq-img-1.jpg" class="img" alt="img not found">
+                            <img src="assets/img/<?= $project_image; ?>" class="img" alt="img not found">
                         </div>
                         <div class="tp-faqs-left-sidebar tp-services-sidebar mb-30">
-                            <h4 class="tp-faqs-left-sidebar-title">Category...</h4>
+                            <h4 class="tp-faqs-left-sidebar-title">Categories...</h4>
                             <ul>
-                                <li><a href="service-details.html">Carpet Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
-                                <li><a href="service-details.html">House Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
-                                <li><a href="service-details.html">Road Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
-                                <li><a href="service-details.html">Kitchen Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
-                                <li><a href="service-details.html">Toilet Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
-                                <li><a href="service-details.html">Office Cleaning <i class="fas fa-arrow-circle-right"></i></a></li>
+                                <li><a>Technology <i class="fas fa-arrow-circle-right"></i></a></li>
+                                <li><a>Education <i class="fas fa-arrow-circle-right"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8">
                     <div class="tp-service-details">
-                        <h2 class="tp-section-title heading-color-black translate-y--10 mb-10">Experience The Difference</h2>
-                        <p class="mb-30">Fusce fusce ante dis varius iaculis quis penatibus do placerat et convallis ultricies egestas hacker pharetra veile litora nascetur diam dapibus euismod neque sapien siverra nunc nisler fortune litora neque ultrices eros aenean
-                            habitant tellus torquent ipsum, commodo Ligula curae; auctor ultricies laoreet metus cubilia enim faucibus litora nibh torquent platea sodales auctor gravida tortor class litora id arcu conubia. Augue suscipit metus ante eu
-                            rhoncus cras. Ipsum nulla feugiat nam pede cras a eleifend. Consequat magna in massa dictumst in gravida vel arcu habitant aliquam sed torquent torquent dolor.</p>
+                        <h2 class="tp-section-title heading-color-black translate-y--10 mb-10"><?= $project_title; ?></h2>
                         <div class="tp-service-details-img mb-30 position-relative">
-                            <img src="assets/img/project/project-details.png" alt="img not found">
+                            <img src="assets/img/<?= $project_image; ?>" alt="img not found">
                         </div>
-                        <p class="mb-25">Neque gravida dui fermentum pulvinar fringilla sodales massa hendrerit nascetur. Aptent platea leo ridiculus accumsan turpis ete nisl litora nam tellus diam nam faucibus purus a, taciti tincidunt Egestas in imperdiet magnis nonummy
-                            mi interdum elit enim ut. Curabitur quis vitae lobortis quam lacus pharetra mus, arcu. Vele Facilisi orci orci nisi consequat dignissim duise in iaculis pulvinar hymenaeos pharetra tortor phasellus. Consectetuer penatibus id.
-                            Eleifend potenti. Elit purus fermentum idev posuere nullam iaculis. Fusce orci co nsectetuer. Metus nonummy turpis sodales vivamus mollis posuere fermentum </p>
-                        <h3 class="tp-service-details-subtitle mb-20">First Class Cleaning Services</h3>
-                        <p class="mb-30">Quisque maorbi gravida, enim hendrerit nunc feugiat vehicula fringilla. Ridiculus sapien curabitur. Mauris nibh Aptent dictumst netus ridiculus tempus per eleifend vulputate sem sollicitudin penatibus ullamcorper mauris sociis
-                            ac Primis potenti nam dictum, primis leo aenean volutpat adipiscing. Metus elit feugiat cras cursus iaculis nulla tortor dictumst sociosqu malesuada nostra scelerisque massa rhoncus torquent pellentesque, primis luctus donec
-                            eget vivamus integer.</p>
+                        <p class="mb-25"><?= $project_desc; ?></p>
+                        
+                        <h3>Project Preview</h3>
                         <div class="tp-service-details-img mb-30 position-relative">
-                            <img src="assets/img/project/project-details-2.jpg" alt="img not found">
+                            <img src="assets/img/<?= $project_image; ?>" alt="img not found">
                             <div class="tp-service-details-img-overlay">
                                 <div class="tp-service-details-img-overlay-icon">
-                                    <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/o4GuSJYSzrY"><i class="fas fa-play"></i></a>
+                                    <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=OBMkGV_wdjI"><i class="fas fa-play"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="tp-service-details-img mb-30">
-                                    <img src="assets/img/project/project-details-3.jpg" alt="img not found">
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="tp-service-details-img mb-30">
-                                    <img src="assets/img/project/project-details-4.jpg" alt="img not found">
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mb-25 d-flex"><i class="far fa-check-circle"></i> Imperdiet. Iaculis bibendum platea feugiat erat commodo maecenas sociosqu varius nunc litora fringilla Tincidunt ad neque vitae duis mus phasellus pede rutrum rutrum massa dis purus magnis senectus
-                            ridiculus vestibulum. Cursus accumsan praes tesque massa consectetuer etiam laoreet velit sagittis erat Inceptos</p>
-                        <p class="d-flex m-0"><i class="far fa-check-circle"></i> Commodo maecenas sociosqu, varius nunc litora fringilla Tincidunt ad neque vitae duis mus phasellus pede rutrum rutrum massa purus magnis senectus ridiculus vestibulum praes tesque massa consectetuer
-                        </p>
+                    
                     </div>
                 </div>
             </div>
@@ -115,54 +103,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-project z-index mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tp-project-img">
-                            <img src="assets/img/project/project-tab-1.jpg" class="img-fluid" alt="img not found">
-                        </div>
-                        <div class="tp-project-text">
-                            <div class="tp-project-text-content">
-                                <span class="tp-project-subtitle">Residential Service</span>
-                                <h4 class="tp-project-title"><a href="project-details.html">Window Cleaning</a></h4>
-                            </div>
-                            <div class="tp-project-text-icon">
-                                <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-project z-index mb-30 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="tp-project-img">
-                            <img src="assets/img/project/project-tab-2.jpg" class="img-fluid" alt="img not found">
-                        </div>
-                        <div class="tp-project-text">
-                            <div class="tp-project-text-content">
-                                <span class="tp-project-subtitle">Residential Service</span>
-                                <h4 class="tp-project-title"><a href="project-details.html">Kitchen Cleaning</a></h4>
-                            </div>
-                            <div class="tp-project-text-icon">
-                                <a href="project-details.html"><i class="fal fa-plus"></i></a>
+
+                <?php
+                    $other_projects = EXECUTE_QUERY(SELECT_ALL_LIMIT("projects", "project_id", 0, 3));
+                    foreach ($other_projects as $other_project) { ?>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="tp-project z-index mb-30 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="tp-project-img">
+                                    
+                                    <div class="" style="background-image: url(&quot;assets/img/<?= $other_project['project_image']; ?>&quot;); background-size: cover; background-position: center; width: 100%; height: 300px;"></div>
+                                </div>
+                                <div class="tp-project-text">
+                                    <div class="tp-project-text-content">
+                                        <span class="tp-project-subtitle"><?= $other_project['project_cat']; ?></span>
+                                        <h4 class="tp-project-title"><a href="<?= FORMAT_URL("./project-details?project=" . $other_project['project_title']); ?>"><?= $other_project['project_title']; ?></a>   </h4>
+                                    </div>
+                                    <div class="tp-project-text-icon">
+                                        <a href="<?= FORMAT_URL("./project-details?project=" . $other_project['project_title']); ?>"><i class="fal fa-plus"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-project z-index mb-30 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="tp-project-img">
-                            <img src="assets/img/project/project-tab-3.jpg" class="img-fluid" alt="img not found">
-                        </div>
-                        <div class="tp-project-text">
-                            <div class="tp-project-text-content">
-                                <span class="tp-project-subtitle">Residential Service</span>
-                                <h4 class="tp-project-title"><a href="project-details.html">Exterior Cleaning</a></h4>
-                            </div>
-                            <div class="tp-project-text-icon">
-                                <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php } ?>
+            
             </div>
         </div>
     </section>

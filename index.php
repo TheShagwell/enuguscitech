@@ -1,4 +1,5 @@
-<?php require_once './inc/header.php'; ?>
+<?php $page="home"; require_once './inc/header.php';
+require_once 'superadmin/MYSQLi/wbtml.php'; ?>
 
 <main>
     <!-- hero area start here -->
@@ -17,7 +18,7 @@
                                     <h6 class="tp-slider-three-subtitle" data-animation="fadeInUp" data-delay=".3s"><img src="assets/img/icon/slider-icon-1.png" class="img-fluid" alt="img not found"> Science and Technology Initiative</h6>
                                     <h1 class="tp-slider-three-title" data-animation="fadeInUp" data-delay=".6s">Education, <br>Programming <br>Guaranteed!</h1>
                                     <div class="tp-slider-three-btn" data-animation="fadeInUp" data-delay=".9s">
-                                        <a href="about.html" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
+                                        <a href="about" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -179,13 +180,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="tp-about-three-btn">
-                                    <a href="service-details.html" class="theme-btn"><i class="flaticon-enter"></i> Learn More</a>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -219,74 +214,35 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-delay=".3s">
-                        <h5 class="tp-section-subtitle-three mb-20">_ _ Upcoming Hackaton Events _ _</h5>
-                        <h2 class="tp-section-title-two color-theme-blue">Come build an idea <br>Showcase your works</h2>
+                        <h5 class="tp-section-subtitle-three mb-20">_ _ Upcoming Events _ _</h5>
+                        <h2 class="tp-section-title-two color-theme-blue">Events to attend</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="tp-service-three mb-30 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="tp-service-three-img">
-                            <img src="assets/img/about/couple-experiencing-vr-simulation-entertainment-technology.jpg" style="width: 260x; height: 300px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                            <!-- <div class="tp-service-three-img-icon">
-                                            <i class="flaticon-house-cleaning"></i>
-                                        </div> -->
-                        </div>
-                        <div class="tp-service-three-text fix">
-                            <h4 class="tp-service-three-title mb-20"><a href="service-details.html">The AI, Ml Hackatons</a></h4>
-                            <p class="mb-30">Join build an unbelievable assigned projects on AI, ML & Deep Learning and get recognized with lots of prices</p>
-                            <div class="tp-service-three-text-btn">
-                                <a href="service-details.html" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
+
+                <?php 
+                    $events = EXECUTE_QUERY(SELECT_ALL_LIMIT("events", "event_id", "0", "4"));
+                    foreach ($events as $event) { ?>
+                        <div class="col-lg-6">
+                            <div class="tp-service-three mb-30 wow fadeInUp" data-wow-delay=".6s">
+                                <div class="tp-service-three-img">
+                                    <img src="assets/img/<?= $event['event_image']; ?>" style="width: 260x; height: 300px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
+                                    <!-- <div class="tp-service-three-img-icon">
+                                                    <i class="flaticon-house-cleaning"></i>
+                                                </div> -->
+                                </div>
+                                <div class="tp-service-three-text fix">
+                                    <h4 class="tp-service-three-title mb-20"><a href="<?= FORMAT_URL("./event-details?event=" . $event['event_title']); ?>"><?= $event['event_title']; ?></a></h4>
+                                    <p class="mb-30"><?= SUB_STRING($event['event_desc']); ?></p>
+                                    <div class="tp-service-three-text-btn">
+                                        <a href="<?= FORMAT_URL("./event-details?event=" . $event['event_title']); ?>" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tp-service-three mb-30 wow fadeInUp" data-wow-delay=".9s">
-                        <div class="tp-service-three-img">
-                            <img src="assets/img/service/smiling-cute-teen-girl-using-laptop-white-wall.jpg" style="width: 260x; height: 300px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                            <!-- <div class="tp-service-three-img-icon">
-                                            <i class="flaticon-cleaning"></i>
-                                        </div> -->
-                        </div>
-                        <div class="tp-service-three-text fix">
-                            <h4 class="tp-service-three-title mb-20"><a href="service-details.html">High School Hackatons</a></h4>
-                            <p class="mb-30">Collaborate with your team on assigned projects which will ivolve other high schools in the state...</p>
-                            <div class="tp-service-three-text-btn">
-                                <a href="service-details.html" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tp-service-three mb-30 wow fadeInUp" data-wow-delay="1.2s">
-                        <div class="tp-service-three-img">
-                            <img src="assets/img/service/fine-girl-studying-with-laptop.jpeg" style="width: 260x; height: 300px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                        </div>
-                        <div class="tp-service-three-text fix">
-                            <h4 class="tp-service-three-title mb-20"><a href="service-details.html">Universities Hackaton</a></h4>
-                            <p class="mb-30">An assigned projects will be sent to all registered teams for the program and will be organized in days...</p>
-                            <div class="tp-service-three-text-btn">
-                                <a href="service-details.html" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tp-service-three mb-30 wow fadeInUp" data-wow-delay="1.5s">
-                        <div class="tp-service-three-img">
-                            <img src="assets/img/service/VR Lady.png" style="width: 260x; height: 300px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                        </div>
-                        <div class="tp-service-three-text fix">
-                            <h4 class="tp-service-three-title mb-20"><a href="service-details.html">IoT Hackaton</a></h4>
-                            <p class="mb-30">Internet of Thing is a widely concept that recognised concepts for companies, states projects. And so adopt the ideas to be used in the state...</p>
-                            <div class="tp-service-three-text-btn">
-                                <a href="service-details.html" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
+    
             </div>
         </div>
     </section>
@@ -302,9 +258,9 @@
                     </div>
                     <div class="col-xl-7 col-lg-8">
                         <div class="tp-footer-subscribe-form">
-                            <form action="#" class="p-0">
+                            <form action="" id="subscribe" class="p-0">
                                 <div class="tp-footer-subscribe-form-field mb-10">
-                                    <input type="text" placeholder="Email Address">
+                                    <input type="email" required id="email" name="email" placeholder="Email Address">
                                     <i class="fal fa-paper-plane"></i>
                                 </div>
                                 <div class="tp-footer-subscribe-form-btn mb-10">
@@ -321,6 +277,7 @@
     <section class="tp-project-area-three pb-90">
         <div class="container">
             <div class="row align-items-center">
+
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="tp-project-title-wrapper wow fadeInUp" data-wow-delay=".2s">
                         <h5 class="tp-section-subtitle-three mb-20">Recent Project _ _</h5>
@@ -330,39 +287,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="tp-project-three mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tp-project-three-img">
-                            <!-- <img src="assets/img/project/project-5.jpg" class="img" alt="img-not-found"> -->
-                            <img src="assets/img/about/couple-experiencing-vr-simulation-entertainment-technology.jpg" style="width: 413px; height: 413px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                            <div class="tp-project-three-img-overlay">
-                                <div class="tp-project-three-img-overlay-text">
-                                    <div class="tp-project-three-img-overlay-text-icon">
-                                        <a href="assets/img/project/project-5.jpg" class="popup-image"><i class="fal fa-plus"></i></a>
+
+                <?php 
+                    $projects = EXECUTE_QUERY(SELECT_ALL_LIMIT("projects", "project_id", "0", "2"));
+                    foreach ($projects as $project) { ?>
+
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="tp-project-three mb-30 wow fadeInUp" data-wow-delay=".4s">
+                                <div class="tp-project-three-img">
+                                    <!-- <img src="assets/img/project/project-5.jpg" class="img" alt="img-not-found"> -->
+                                    <img src="assets/img/<?= $project['project_image']; ?>" style="width: 413px; height: 413px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
+                                    <div class="tp-project-three-img-overlay">
+                                        <div class="tp-project-three-img-overlay-text">
+                                            <div class="tp-project-three-img-overlay-text-icon">
+                                                <a href="assets/img/<?= $project['project_image']; ?>" class="popup-image"><i class="fal fa-plus"></i></a>
+                                            </div>
+                                            <h4 class="tp-project-three-img-overlay-title"><a href="<?= FORMAT_URL("./project-details?project=" . $project['project_title']); ?>"><?= $project['project_title']; ?></a></h4>
+                                            <span><?= $project['handled_by']; ?></span>
+                                        </div>
                                     </div>
-                                    <h4 class="tp-project-three-img-overlay-title"><a href="project-details.html">VR Programming</a></h4>
-                                    <span>AI & ML Concepts</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="tp-project-three mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="tp-project-three-img">
-                            <img src="assets/img/about/antenna-cw-cj_nFa14-unsplash.jpg" style="width: 413px; height: 413px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
-                            <div class="tp-project-three-img-overlay">
-                                <div class="tp-project-three-img-overlay-text">
-                                    <div class="tp-project-three-img-overlay-text-icon">
-                                        <a href="assets/img/project/project-6.jpg" class="popup-image"><i class="fal fa-plus"></i></a>
-                                    </div>
-                                    <h4 class="tp-project-three-img-overlay-title"><a href="project-details.html">EWYGA 2020</a></h4>
-                                    <span>Youth Empowerment Program</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <?php } ?>
                 <!-- <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="tp-project-three mb-30 wow fadeInUp" data-wow-delay="1s">
                                     <div class="tp-project-three-img">
@@ -478,27 +426,27 @@
                     </div>
                 </div>
                 <div class="col-xl-8 col-lg-9 custom-pad-20">
+                    <form action="" id="appointment" method="post">
                     <div class="row align-items-center custom-mar-20">
                         <div class="col-lg-4 custom-pad-20">
                             <div class="tp-appoint tp-appoint-three wow fadeInUp" data-wow-delay=".4s">
-                                <input type="text" placeholder="Full Name">
+                                <input id="fullname" required name="fullname" type="text" placeholder="Full Name">
                             </div>
                         </div>
                         <div class="col-lg-4 custom-pad-20">
                             <div class="tp-appoint tp-appoint-three wow fadeInUp" data-wow-delay=".6s">
-                                <input type="text" placeholder="Phone Number">
+                                <input type="text" id="phone" required name="phone" placeholder="Phone Number">
                             </div>
                         </div>
                         <div class="col-lg-4 custom-pad-20">
                             <div class="tp-appoint tp-appoint-three select-field-arrow wow fadeInUp" data-wow-delay=".8s">
-                                <select>
-                                                <option value="">Service Name</option>
-                                                <option value="">Commercial Service</option>
-                                                <option value="">Residential Service</option>
-                                                <option value="">Industrial Service</option>
-                                                <option value="">Commercial Service</option>
-                                                <option value="">Residential Service</option>
-                                            </select>
+                                <select name="cat" id="cat" required>
+                                    <option value="" disabled selected>Appointment On:</option>
+                                    <option value="Project Request">Project Request</option>
+                                    <option value="Tech Ideas">Tech Ideas</option>
+                                    <option value="Internet Of Things">Internet Of Things</option>
+                                    <option value="Tech Related Events">Tech related events</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -508,6 +456,7 @@
                         <button type="submit" class="theme-btn"><i class="flaticon-enter"></i> Submit Now</button>
                     </div>
                 </div>
+                    </form>
             </div>
         </div>
     </section>
@@ -606,60 +555,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-blog-three mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tp-blog-three-img">
-                            <a href="blog-details.html"><img src="assets/img/about/antenna-cw-cj_nFa14-unsplash.jpg" style="width: 410px; height: 390px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found"></a>
-                        </div>
-                        <div class="tp-blog-three-text">
-                            <div class="tp-blog-three-text-meta">
-                                <a href="blog-details.html">By Godson Azubuike</a>
-                                <span>_ _</span>
-                                <a href="blog-details.html">Feb 12 - 2022</a>
+
+            <?php 
+                $articles = EXECUTE_QUERY(SELECT_ALL_LIMIT("articles", "article_id", "0", "3"));
+                foreach ($articles as $article) { ?>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tp-blog-three mb-30 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="tp-blog-three-img">
+                                <a href="<?= FORMAT_URL("./article-details?article=" . $article['article_title']); ?>"><img src="assets/img/<?= $article['article_image']; ?>" style="width: 410px; height: 390px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found"></a>
                             </div>
-                            <h4 class="tp-blog-three-title mb-15"><a href="blog-details.html">State Government gifts out laptops</a></h4>
-                            <div class="tp-blog-three-link">
-                                <a href="blog-details.html"><i class="flaticon-enter"></i> Continue Reading</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-blog-three mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="tp-blog-three-img">
-                            <a href="blog-details.html"><img src="assets/img/about/antenna-cw-cj_nFa14-unsplash.jpg" style="width: 410px; height: 390px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found"></a>
-                        </div>
-                        <div class="tp-blog-three-text">
-                            <div class="tp-blog-three-text-meta">
-                                <a href="blog-details.html">By Shagwell</a>
-                                <span>_ _</span>
-                                <a href="blog-details.html">Feb 16 - 2022</a>
-                            </div>
-                            <h4 class="tp-blog-three-title mb-15"><a href="blog-details.html">State Government gifts out laptops</a></h4>
-                            <div class="tp-blog-three-link">
-                                <a href="blog-details.html"><i class="flaticon-enter"></i> Continue Reading</a>
+                            <div class="tp-blog-three-text">
+                                <div class="tp-blog-three-text-meta">
+                                    <a href="<?= FORMAT_URL("./article-details?article=" . $article['article_title']); ?>">By Admin</a>
+                                    <span>*</span>
+                                    <a href="<?= FORMAT_URL("./article-details?article=" . $article['article_title']); ?>"><?= HUMAN_DATE($article['created_at']); ?></a>
+                                </div>
+                                <h4 class="tp-blog-three-title mb-15"><a href="<?= FORMAT_URL("./article-details?article=" . $article['article_title']); ?>"><?= $article['article_title'];?></a></h4>
+                                <div class="tp-blog-three-link">
+                                    <a href="<?= FORMAT_URL("./article-details?article=" . $article['article_title']); ?>"><i class="flaticon-enter"></i> Continue Reading</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="tp-blog-three mb-30 wow fadeInUp" data-wow-delay="1s">
-                        <div class="tp-blog-three-img">
-                            <a href="blog-details.html"><img src="assets/img/about/antenna-cw-cj_nFa14-unsplash.jpg" style="width: 410px; height: 390px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found"></a>
-                        </div>
-                        <div class="tp-blog-three-text">
-                            <div class="tp-blog-three-text-meta">
-                                <a href="blog-details.html">By Helen John</a>
-                                <span>_ _</span>
-                                <a href="blog-details.html">Feb 18 - 2022</a>
-                            </div>
-                            <h4 class="tp-blog-three-title mb-15"><a href="blog-details.html">State Government gifts out laptops</a></h4>
-                            <div class="tp-blog-three-link">
-                                <a href="blog-details.html"><i class="flaticon-enter"></i> Continue Reading</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <?php } ?>
             </div>
         </div>
         <!-- contact area start here -->

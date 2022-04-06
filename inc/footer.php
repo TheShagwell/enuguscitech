@@ -48,9 +48,9 @@
                         <h4 class="tp-footer-widget-title mb-40">Newsletter</h4>
                         <div class="tp-footer-newsletter-three">
                             <p class="mb-20">Sign up to get new exclusive offers</p>
-                            <form action="#">
+                            <form action="" id="footersubscribe">
                                 <div class="tp-footer-newsletter-three-field position-relative mb-20">
-                                    <input type="email" placeholder="Enter Email">
+                                    <input type="email" required id="email" name="email" placeholder="Enter Email">
                                     <i class="fal fa-paper-plane"></i>
                                 </div>
                                 <button type="submit" class="yellow-btn"><i class="flaticon-enter"></i> Subscribe</button>
@@ -87,6 +87,9 @@
 <script src="assets/js/ajax-form.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+<!-- WBT -->
+<script src="assets/js/actions.js"></script>
 </body>
 
 </html>

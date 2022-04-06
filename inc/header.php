@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-xxl-4 col-xl-2">
                             <div class="header-logo text-center">
-                                <a href="index.php"><img src="assets/img/logo/Enugu_State_Government.png" style="width: 80px; height: 80px;" class="img-fluid" alt="logo not found"></a>
+                                <a href="index"><img src="assets/img/logo/Enugu_State_Government.png" style="width: 60px; height: 60px;" class="img-fluid" alt="logo not found"></a>
                             </div>
                         </div>
                         <div class="col-xxl-4 col-xl-5">
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="tp-header-top-info-single">
                                     <div class="tp-header-top-info-single-btn">
-                                        <a href="contact.php" class="yellow-btn"><i class="flaticon-enter"></i> Free Quote</a>
+                                        <a href="contact" class="yellow-btn"><i class="flaticon-enter"></i> Free Quote</a>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                     <div class="row justify-content-xl-center align-items-center">
                         <div class="col-xl-2 col-8 tp-sticky-column">
                             <div class="tp-sticky-logo">
-                                <a href="index.php"><img src="assets/img/logo/Enugu_State_Government.png" style="width: 80px; height: 80px;" class="img-fluid" alt="logo not found"></a>
+                                <a href="index"><img src="assets/img/logo/Enugu_State_Government.png" style="width: 60px; height: 60px;" class="img-fluid" alt="logo not found"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-4">
@@ -115,22 +115,18 @@
                                     <nav id="tp-mobile-menu">
                                         <ul class="text-center">
                                             <li class="menu-item-has-children">
-                                                <a href="index.php" class="active">Home</a>
+                                                <a href="index" class="<?php if ($page === "home") : echo "active"; endif; ?>">Home</a>
                                             </li>
-                                            <li><a href="hackatons.php">Hackatons</a></li>
                                             <li class="menu-item-has-children">
-                                                <a href="project.php">Projects</a>
+                                                <a href="" class="<?php if ($page === "about") : echo "active"; endif; ?>">About</a>
                                             </li>
-                                            <li><a href="hackatons.php">Science</a></li>
+                                            <li><a href="events" class="<?php if ($page === "events") : echo "active"; endif; ?>">Events</a></li>
                                             <li class="menu-item-has-children">
-                                                <a href="hackatons.php">Tech</a>
+                                                <a href="project" class="<?php if ($page === "projects") : echo "active"; endif; ?>">Projects</a>
                                             </li>
-                                            <li class="menu-item-has-children"><a href="#">About</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="about.php">About</a></li>
-                                                    <li><a href="team.php">Team</a></li>
-                                                    <li><a href="contact.php">Contact</a></li>
-                                                </ul>
+                                            <li><a href="articles" class="<?php if ($page === "articles") : echo "active"; endif; ?>">Articles</a></li>
+                                            <li class="menu-item-has-children">
+                                                <a href="contact" class="<?php if ($page === "contact") : echo "active"; endif; ?>">Contact</a>
                                             </li>
 
                                         </ul>
@@ -144,7 +140,7 @@
                         </div>
                         <div class="col-xl-2 tp-sticky-column-btn">
                             <div class="tp-sticky-btn text-end">
-                                <a href="contact.php" class="theme-btn justify-content-end"><i class="flaticon-enter"></i> Free Quote</a>
+                                <a href="contact" class="theme-btn justify-content-end"><i class="flaticon-enter"></i> Free Quote</a>
                             </div>
                         </div>
                     </div>

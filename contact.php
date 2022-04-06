@@ -29,8 +29,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="tp-contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830894612!2d-74.11976383964465!3d40.69766374865766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1636888514620!5m2!1sen!2sbd"
-                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014801.997324731!2d6.821661833701839!3d6.512786011637447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105b662586cf0979%3A0x27595621a4034717!2sEnugu!5e0!3m2!1sen!2sng!4v1649253404538!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -44,7 +43,7 @@
             <div class="row">
                 <div class="col-lg-10">
                     <div class="section-title-wrapper-two mb-50 wow fadeInUp" data-wow-delay=".2s">
-                        <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">Get Free Estimate</h5>
+                        <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">Contact Office</h5>
                         <h2 class="tp-section-title heading-color-black">If you Have Any Query, Don’t Hesitate <br>Contact with us </h2>
                     </div>
                 </div>
@@ -59,7 +58,7 @@
                                 </div>
                                 <div class="tp-contact-info-text">
                                     <h4 class="tp-contact-info-title mb-15">Address</h4>
-                                    <p>5/A 5suvastu arcade, 3rd Floor <br>palace road, London.</p>
+                                    <p>Ogui Road <br>Enugu, Nigeria.</p>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +70,6 @@
                                 <div class="tp-contact-info-text">
                                     <h4 class="tp-contact-info-title mb-15">Phone</h4>
                                     <a href="tel:333888200-55">333888200-55</a>
-                                    <a href="tel:444555300-25">444555300-25</a>
                                 </div>
                             </div>
                         </div>
@@ -82,45 +80,39 @@
                                 </div>
                                 <div class="tp-contact-info-text">
                                     <h4 class="tp-contact-info-title mb-15">Email</h4>
-                                    <a href="mailto:info@themepure.com">info@themepure.com</a>
-                                    <a href="mailto:info@themepure.com">info@themepure.com</a>
+                                    <a href="mailto:info@themepure.com">info@enugu.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
+                    <form action="" id="contact" method="post">
                     <div class="tp-contact-form">
                         <div class="row custom-mar-20">
                             <div class="col-md-6 custom-pad-20">
                                 <div class="tp-contact-form-field mb-20">
-                                    <input type="text" placeholder="Full name">
+                                    <input required type="text" id="fullname" name="fullname" placeholder="Full name">
                                 </div>
                             </div>
                             <div class="col-md-6 custom-pad-20">
                                 <div class="tp-contact-form-field mb-20">
-                                    <input type="email" placeholder="Email Address">
+                                    <input required type="email" id="email" name="email" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="col-md-6 custom-pad-20">
                                 <div class="tp-contact-form-field mb-20">
-                                    <input type="text" placeholder="Phone">
+                                    <input required type="text" id="phone" name="phone" placeholder="Phone">
                                 </div>
                             </div>
                             <div class="col-md-6 custom-pad-20">
-                                <div class="tp-contact-form-field select-field-arrow mb-20">
-                                    <select>
-                                            <option value="">Choose Subject</option>
-                                            <option value="">House Cleaning</option>
-                                            <option value="">Office Cleaning</option>
-                                            <option value="">Kitchen Cleaning</option>
-                                            <option value="">Club Cleaning</option>
-                                        </select>
+                            <div class="tp-contact-form-field mb-20">
+                                    <input required type="text" name="subject" id="subject" placeholder="Subject">
                                 </div>
                             </div>
                             <div class="col-md-12 custom-pad-20">
                                 <div class="tp-contact-form-field mb-20">
-                                    <textarea placeholder="Your Message"></textarea>
+                                    <textarea required name="message" id="message" placeholder="Your Message"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-12 custom-pad-20">
@@ -130,6 +122,7 @@
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

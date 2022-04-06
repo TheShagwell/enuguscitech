@@ -1,4 +1,6 @@
-<?php require_once './inc/header.php'; ?>
+<?php $page="projects"; require_once './inc/header.php';
+require_once 'superadmin/MYSQLi/wbtml.php'; ?>
+
 <main>
     <!-- breadcrumb area start -->
     <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/breadcrumb-bg-1.jpg">
@@ -30,17 +32,17 @@
                 <div class="col-12">
                     <div class="tp-prjects-tab-menu mb-60">
                         <ul class="nav justify-content-center" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Carpet</button>
+                                <button class="nav-link" id="IOT-tab" data-bs-toggle="tab" data-bs-target="#iot" type="button" role="tab" aria-controls="profile" aria-selected="false">IOT</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Glass</button>
-                            </li>
+                                <button class="nav-link" id="programming-tab" data-bs-toggle="tab" data-bs-target="#programming" type="button" role="tab" aria-controls="contact" aria-selected="false">PRORAMMING</button>
+                            </li> -->
 
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="contact-tab1" data-bs-toggle="tab" data-bs-target="#contact1" type="button" role="tab" aria-controls="contact1" aria-selected="false">Outdoor</button>
                             </li>
                             <li class="nav-item" role="presentation">
@@ -48,7 +50,7 @@
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="contact-tab3" data-bs-toggle="tab" data-bs-target="#contact3" type="button" role="tab" aria-controls="contact3" aria-selected="false">Kitchen</button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -59,153 +61,34 @@
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <div class="row">
+
+                                <?php
+                                    $projects = EXECUTE_QUERY(SELECT_ALL("projects", "project_id"));
+                                    foreach ($projects as $project) {
+                                        extract($project); ?>
+
                                     <div class="col-lg-4 col-md-6">
                                         <div class="tp-project z-index mb-30">
                                             <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-1.jpg" class="img-fluid" alt="img not found">
+                                                <img src="assets/img/<?= $project_image; ?>" class="img-fluid" alt="img not found">
                                             </div>
                                             <div class="tp-project-text">
                                                 <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Window Cleaning</a></h4>
+                                                    <span class="tp-project-subtitle"><?= $handled_by; ?></span>
+                                                    <h4 class="tp-project-title"><a href="<?= FORMAT_URL("./project-details?project=" . $project_title); ?>"><?= $project_title; ?></a></h4>
                                                 </div>
                                                 <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
+                                                    <a href="<?= FORMAT_URL("./project-details?project=" . $project_title); ?>"><i class="fal fa-plus"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-2.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Kitchen Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-3.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Exterior Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-4.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Bathroom Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-9.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Apartment Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-5.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Floor Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-6.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Ground Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-7.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Market Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-8.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Plumbing Service</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                <?php } ?>
+                                    
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="tab-pane fade" id="iot" role="tabpanel" aria-labelledby="IOT-tab">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
                                         <div class="tp-project z-index mb-30">
@@ -214,8 +97,8 @@
                                             </div>
                                             <div class="tp-project-text">
                                                 <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Window Cleaning</a></h4>
+                                                    <span class="tp-project-subtitle">Title</span>
+                                                    <h4 class="tp-project-title"><a href="project-details.html">WBy</a></h4>
                                                 </div>
                                                 <div class="tp-project-text-icon">
                                                     <a href="project-details.html"><i class="fal fa-plus"></i></a>
@@ -223,137 +106,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-2.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Kitchen Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-3.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Exterior Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-4.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Bathroom Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-9.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Apartment Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-5.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Floor Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-6.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Ground Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-7.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Market Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-8.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Plumbing Service</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                  
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="tab-pane fade" id="programming" role="tabpanel" aria-labelledby="programming-tab">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
                                         <div class="tp-project z-index mb-30">
@@ -362,8 +118,8 @@
                                             </div>
                                             <div class="tp-project-text">
                                                 <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Window Cleaning</a></h4>
+                                                    <span class="tp-project-subtitle">Title</span>
+                                                    <h4 class="tp-project-title"><a href="project-details.html">WBy</a></h4>
                                                 </div>
                                                 <div class="tp-project-text-icon">
                                                     <a href="project-details.html"><i class="fal fa-plus"></i></a>
@@ -371,134 +127,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-2.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Kitchen Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-3.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Exterior Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-4.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Bathroom Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-9.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Apartment Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-5.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Floor Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-6.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Ground Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-7.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Market Cleaning</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="tp-project z-index mb-30">
-                                            <div class="tp-project-img">
-                                                <img src="assets/img/project/project-tab-8.jpg" class="img-fluid" alt="img not found">
-                                            </div>
-                                            <div class="tp-project-text">
-                                                <div class="tp-project-text-content">
-                                                    <span class="tp-project-subtitle">Residential Service</span>
-                                                    <h4 class="tp-project-title"><a href="project-details.html">Plumbing Service</a></h4>
-                                                </div>
-                                                <div class="tp-project-text-icon">
-                                                    <a href="project-details.html"><i class="fal fa-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                               
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="contact1" role="tabpanel" aria-labelledby="contact-tab1">
@@ -949,13 +578,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="tp-projects-btn d-flex justify-content-center">
-                        <a href="project-details.html" class="theme-btn"><i class="flaticon-enter"></i> Explore More</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     <!-- project area end here -->

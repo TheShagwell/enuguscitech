@@ -1,12 +1,14 @@
-<?php require_once './inc/header.php'; ?>
+<?php $page="about"; require_once './inc/header.php'; 
+require_once 'superadmin/MYSQLi/wbtml.php';
+?>
+
 <main>
     <!-- breadcrumb area start -->
-    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/breadcrumb-bg-1.jpg">
-        <div class="tp-custom-container">
+    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="https://diplomaticinfo.com/wp-content/uploads/2021/02/Enugu-State-Government-750x375.jpg" style="background-image: url(https://diplomaticinfo.com/wp-content/uploads/2021/02/Enugu-State-Government-750x375.jpg">
             <div class="row">
                 <div class="col-12">
                     <div class="tp-page-title z-index">
-                        <h2 class="breadcrumb-title">About <span>Klenar</span></h2>
+                        <h2 class="breadcrumb-title text-light">About <span>Klenar</span></h2>
                         <div class="breadcrumb-menu">
                             <nav class="breadcrumb-trail breadcrumbs">
                                 <ul class="trail-items">
