@@ -4,17 +4,17 @@ require_once 'superadmin/MYSQLi/wbtml.php';
 
 <main>
     <!-- breadcrumb area start -->
-    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="https://diplomaticinfo.com/wp-content/uploads/2021/02/Enugu-State-Government-750x375.jpg" style="background-image: url(https://diplomaticinfo.com/wp-content/uploads/2021/02/Enugu-State-Government-750x375.jpg">
+    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/GovenorUgwanyi.png" style="background-image: url('assets/img/slider/GovenorUgwanyi.png) width: max-content;">
             <div class="row">
                 <div class="col-12">
                     <div class="tp-page-title z-index">
-                        <h2 class="breadcrumb-title text-light">About <span>Klenar</span></h2>
+                        <h2 class="breadcrumb-title text-light">About <span>Enugu Sci. & Tech</span></h2>
                         <div class="breadcrumb-menu">
                             <nav class="breadcrumb-trail breadcrumbs">
                                 <ul class="trail-items">
-                                    <li class="trail-item trail-begin"><a href="index.html">Home</a>
+                                    <li class="trail-item trail-begin"><a href="index.php" style="color: #f7f7f7;">Home</a>
                                     </li>
-                                    <li class="trail-item trail-end"><span>Appointment</span></li>
+                                    <li class="trail-item trail-end"><span style="color: #f7f7f7;">Enugu Science & Technology Team</span></li>
                                 </ul>
                             </nav>
                         </div>
@@ -31,22 +31,26 @@ require_once 'superadmin/MYSQLi/wbtml.php';
             <div class="row">
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <div class="tp-about-img-two tp-abouts-img-two position-relative mr-80 wow fadeInUp" data-wow-delay=".4s">
-                        <img src="assets/img/about/about-img-2.jpg" class="img-fluid" alt="img not found">
-                        <img src="assets/img/about/about-img-3.png" class="img-fluid img-second" alt="img not found">
+                        <img src="assets/img/about/Group-29.jpg" style="border: thin solid #06ae5a; border-radius: 20px 0 20px 0" class="img-fluid" alt="img not found">
+                        <!-- <img src="assets/img/about/about-img-3.png" class="img-fluid img-second" alt="img not found"> -->
                         <div class="tp-about-img-two-badge">
-                            <h3>20</h3>
-                            <h5>years <br>Experience</h5>
+                            <h3></h3>
+                            <h5> <br>Experience</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-md-10">
                     <div class="tp-about-text tp-about-inner-page-text z-index wow fadeInUp" data-wow-delay=".6s">
                         <div class="section-title-wrapper mb-30">
-                            <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">About our Company</h5>
-                            <h2 class="tp-section-title heading-color-black">Our Success Cleaning <br>Up your Mess</h2>
+                            <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">About our Initiative & Purposes</h5>
+                            <h2 class="tp-section-title heading-color-black">Connecting the <br>future Generation</h2>
                         </div>
-                        <p class="mb-40">Can consent to the use of such technologies byclosing this notice senectus amet sodales habitant dapibus </p>
-                        <div class="row mb-10">
+                        <p class="mb-40">Our sole aim is to produce and effectively work together with the next generation of science and tech stuudent individuals to develop the state on science and techology across the state and beyond. <br>
+                            We are currently proposing the following programs to run within the years suuch as scholarship fundings for those who are aspired to build high profile technologies in the state and beyond, hackathon programs to organise a showbiz of talented individuals in the state, upskill programs as an avenue for the youths to get upskilled in tech and science. 
+                            We are absolutely proud of working with State Government to achieve greater Enugu State in Enugu State.   
+                            
+                        </p>
+                        <!-- <div class="row mb-10">
                             <div class="col-sm-6">
                                 <div class="tp-about-service mb-30">
                                     <div class="tp-about-service-icon yellow-circle-shape mb-15">
@@ -69,27 +73,23 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 ">
                                 <div class="tp-about-number mb-30">
                                     <div class="tp-about-number-icon">
                                         <i class="flaticon-phone-call-1"></i>
                                     </div>
                                     <div class="tp-about-number-text">
-                                        <span class="heading-color-black">Free Consutacy</span>
-                                        <a href="tel:02(552)6620808" class="heading-color-black">02 (552) 662 0808</a>
+                                        <span class="heading-color-black">Free toll-line</span>
+                                        <a href="tel:+234(0)812989485" class="heading-color-black">+234(0)812989485</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="tp-about-author mb-30">
-                                    <div class="tp-about-author-img">
-                                        <img src="assets/img/about/about-author.png" class="img-fluid" alt="img not found">
-                                    </div>
                                     <div class="tp-about-author-text">
-                                        <h4 class="tp-about-author-text-title heading-color-black">Daniel Martyn</h4>
-                                        <span class="heading-color-black">CEO - Fetoxe</span>
+                                        <a href="contact" class="theme-btn justify-content-end">Send us Message</a>
                                     </div>
                                 </div>
                             </div>
@@ -101,14 +101,14 @@ require_once 'superadmin/MYSQLi/wbtml.php';
     </section>
     <!-- about area end here -->
 
-    <!-- feature area start here -->
-    <section class="tp-feature-area-three pt-120 pb-80 bg-gray-light">
+     <!-- feature area start here -->
+    <section class="tp-feature-area-three pt-115 pb-80">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="section-title-wrapper text-center mb-45 wow fadeInUp" data-wow-delay=".2s">
-                        <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">Our Working Process</h5>
-                        <h2 class="tp-section-title mb-25 heading-color-black">Excellent Techniques For <br>Effective Cleaning</h2>
+                    <div class="section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-delay=".2s">
+                        <h5 class="tp-section-subtitle-three mb-20"> _ _ How We Works _ _</h5>
+                        <h2 class="tp-section-title-two color-theme-blue">Empowering Science and Technology<br>Projects in the State</h2>
                     </div>
                 </div>
             </div>
@@ -120,8 +120,8 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                             <i class="flaticon-booking"></i>
                         </div>
                         <div class="tp-feature-three-text">
-                            <h4 class="tp-feature-three-title mb-20 heading-color-black-with-hover"><a href="project-details.html">Book Online</a></h4>
-                            <p>Coingue aten lorem consqua interdum pretium ligaula a semper mauris easy dictuma</p>
+                            <h4 class="tp-feature-three-title mb-20">Internet of Things (IoT)</h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -132,8 +132,8 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                             <i class="flaticon-delivery-box"></i>
                         </div>
                         <div class="tp-feature-three-text">
-                            <h4 class="tp-feature-three-title mb-20 heading-color-black-with-hover"><a href="project-details.html">Received Data</a></h4>
-                            <p>Coingue aten lorem consqua interdum pretium ligaula a semper mauris easy dictuma</p>
+                            <h4 class="tp-feature-three-title mb-20">Science <br>(From any Level)</h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -144,8 +144,8 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                             <i class="flaticon-boy"></i>
                         </div>
                         <div class="tp-feature-three-text">
-                            <h4 class="tp-feature-three-title mb-20 heading-color-black-with-hover"><a href="project-details.html">Ready Cleaner</a></h4>
-                            <p>Coingue aten lorem consqua interdum pretium ligaula a semper mauris easy dictuma</p>
+                            <h4 class="tp-feature-three-title mb-20">Tech Programming <br>(AI, ML, Python, Web etc)</h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -156,8 +156,8 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                             <i class="flaticon-cleaning"></i>
                         </div>
                         <div class="tp-feature-three-text">
-                            <h4 class="tp-feature-three-title mb-20 heading-color-black-with-hover"><a href="project-details.html">Start Cleaning</a></h4>
-                            <p>Coingue aten lorem consqua interdum pretium ligaula a semper mauris easy dictuma</p>
+                            <h4 class="tp-feature-three-title mb-20">Hackaton Programs <br>(The Hunt of the Unelievables in the State)</h4>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -179,42 +179,42 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                     <div class="tp-faq-text tp-about-faq-text pt-130 pb-120">
                         <div class="section-title-wrapper-two mb-45">
                             <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">Essential Questions</h5>
-                            <h2 class="tp-section-title heading-color-black">Every Cleaning Related <br>Answer is Here</h2>
+                            <h2 class="tp-section-title heading-color-black">Frequent Questions<br>Asked & Answered</h2>
                         </div>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            How many years have you been in business?
+                                            How will i know if the state government on science and technology have started a program for the youths such ?
                                         </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Enim quisque primis praesent cursus convallis pulvinar phasellus adipiscing nullam ullamcorper pretium accumsan.
+                                        If the state government on science and technology wants to kick start any program. It will be annnounced on her social media platforms, state radios and billboards.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Do you bring equipment and cleaning supplies?
+                                            Will i pay to participate to learn or attend her programs?
                                         </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Enim quisque primis praesent cursus convallis pulvinar phasellus adipiscing nullam ullamcorper pretium accumsan.
+                                        We will not charge anyone for any reasons on any range of programs from the state government of science and technology. Plese be aware and beware of scammers.
                                     </div>
                                 </div>
                             </div>
                             <div class="accordion-item m-0">
                                 <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            How many years have you been in business?
+                                            How reliable are the programs to be organised? 
                                         </button>
                                 </h2>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        Enim quisque primis praesent cursus convallis pulvinar phasellus adipiscing nullam ullamcorper pretium accumsan.
+                                        Any program launched from us are 100% reliable.
                                     </div>
                                 </div>
                             </div>
@@ -227,132 +227,7 @@ require_once 'superadmin/MYSQLi/wbtml.php';
     </section>
     <!-- faq area end here -->
 
-    <!-- service area start here -->
-    <section class="tp-service-area-two pt-120 pb-80 bg-gray-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-title-wrapper-two mb-55 text-center wow fadeInUp" data-wow-delay=".2s">
-                        <h5 class="tp-section-subtitle common-yellow-shape mb-20 heading-color-black">Our Advisory Team</h5>
-                        <h2 class="tp-section-title heading-color-black">Guranteed Quality Cleaning <br>Service Everytime</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="tp-service-active swiper-container common-dots">
-                <div class="swiper-wrapper pb-80">
-                    <div class="tp-service-two text-center swiper-slide mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tp-service-two-img mb-35">
-                            <div class="tp-service-two-img-box">
-                                <img src="assets/img/service/service-1.jpg" class="img-fluid" alt="img not found">
-                            </div>
-                            <div class="tp-service-two-icon-wrapper">
-                                <div class="tp-service-two-icon">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <a href="javascript:void(0)" class="share-icon"><i class="fas fa-share-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-service-two-content">
-                            <h4 class="tp-service-two-title"><a href="team-details.html">Rose Dawson</a></h4>
-                            <span>Kitchen Cleaner</span>
-                        </div>
-                    </div>
-                    <div class="tp-service-two text-center swiper-slide mb-30 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="tp-service-two-img mb-35">
-                            <div class="tp-service-two-img-box">
-                                <img src="assets/img/service/service-2.jpg" class="img-fluid" alt="img not found">
-                            </div>
-                            <div class="tp-service-two-icon-wrapper">
-                                <div class="tp-service-two-icon">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <a href="javascript:void(0)" class="share-icon"><i class="fas fa-share-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-service-two-content">
-                            <h4 class="tp-service-two-title"><a href="team-details.html">Stuart Broad</a></h4>
-                            <span>House Cleaner</span>
-                        </div>
-                    </div>
-                    <div class="tp-service-two text-center swiper-slide mb-30 wow fadeInUp" data-wow-delay="1s">
-                        <div class="tp-service-two-img mb-35">
-                            <div class="tp-service-two-img-box">
-                                <img src="assets/img/service/service-3.jpg" class="img-fluid" alt="img not found">
-                            </div>
-                            <div class="tp-service-two-icon-wrapper">
-                                <div class="tp-service-two-icon">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <a href="javascript:void(0)" class="share-icon"><i class="fas fa-share-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-service-two-content">
-                            <h4 class="tp-service-two-title"><a href="team-details.html">Shane Watson</a></h4>
-                            <span>Office Cleaner</span>
-                        </div>
-                    </div>
-                    <div class="tp-service-two text-center swiper-slide mb-30 wow fadeInUp" data-wow-delay="1.3s">
-                        <div class="tp-service-two-img mb-35">
-                            <div class="tp-service-two-img-box">
-                                <img src="assets/img/service/service-4.jpg" class="img-fluid" alt="img not found">
-                            </div>
-                            <div class="tp-service-two-icon-wrapper">
-                                <div class="tp-service-two-icon">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <a href="javascript:void(0)" class="share-icon"><i class="fas fa-share-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-service-two-content">
-                            <h4 class="tp-service-two-title"><a href="team-details.html">Georgia Melinda</a></h4>
-                            <span>Office Cleaner</span>
-                        </div>
-                    </div>
-                    <div class="tp-service-two text-center swiper-slide mb-30 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="tp-service-two-img mb-35">
-                            <div class="tp-service-two-img-box">
-                                <img src="assets/img/service/service-1.jpg" class="img-fluid" alt="img not found">
-                            </div>
-                            <div class="tp-service-two-icon-wrapper">
-                                <div class="tp-service-two-icon">
-                                    <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    </ul>
-                                    <a href="javascript:void(0)" class="share-icon"><i class="fas fa-share-alt"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-service-two-content">
-                            <h4 class="tp-service-two-title"><a href="team-details.html">Georgia Mishel</a></h4>
-                            <span>Kitchen Cleaner</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-service-pagination slide-dots"></div>
-            </div>
-        </div>
-    </section>
-    <!-- service area end here -->
 
     <!-- testimonial area start here -->
     <section class="tp-testimonial-area position-relative">
@@ -374,15 +249,14 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                             <div class="tp-testimonial-active swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="tp-testimonial-single swiper-slide z-index">
-                                        <p class="mb-45">Erat dapibus interdum consequat eleifend. Porttitor iaculis per lectus ornare dolor pede. Metus urna faucibus montes duis conds imentum congue. Accumsan bibendum pharetra a quisque nulla dictumst quam praesent pharetra
-                                            cos aptent sociosqu. Imperdiet mattis sociosqu differ frome aliquam.</p>
+                                        <p class="mb-45">Enugu State Government in Science and Technology is building the next generation of science and Technology individuals in the future to enhance world best technology.</p>
                                         <div class="tp-testimonial-author">
                                             <div class="tp-testimonial-author-img">
-                                                <img src="assets/img/testimonial/testimonial-author-1.jpg" class="img-fluid" alt="img not found">
+                                                <img src="assets/img/testimonial/muscle-man-smiling.jpg" class="img-fluid" alt="img not found">
                                             </div>
                                             <div class="tp-testimonial-author-text">
-                                                <h4 class="tp-testimonial-author-text-name heading-color-black">Rich Gragory</h4>
-                                                <span class="tp-testimonial-author-text-designation">Chief Marketing Manager</span>
+                                                <h4 class="tp-testimonial-author-text-name heading-color-black">Chijoke Fenna</h4>
+                                                <span class="tp-testimonial-author-text-designation">Snr. Product Designer, Apple Ng</span>
                                             </div>
                                         </div>
                                         <div class="tp-testimonial-qoute">
@@ -390,15 +264,14 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                                         </div>
                                     </div>
                                     <div class="tp-testimonial-single swiper-slide z-index">
-                                        <p class="mb-45">Erat dapibus interdum consequat eleifend. Porttitor iaculis per lectus ornare dolor pede. Metus urna faucibus montes duis conds imentum congue. Accumsan bibendum pharetra a quisque nulla dictumst quam praesent pharetra
-                                            cos aptent sociosqu. Imperdiet mattis sociosqu differ frome aliquam.</p>
+                                        <p class="mb-45">Enugu State Government in Science and Technology is building the next generation of science and Technology individuals in the future to enhance world best technology.</p>
                                         <div class="tp-testimonial-author">
                                             <div class="tp-testimonial-author-img">
-                                                <img src="assets/img/testimonial/testimonial-author-2.jpg" class="img-fluid" alt="img not found">
+                                                <img src="assets/img/testimonial/guy_smiling_on_yellow_shirt.png" class="img-fluid" alt="img not found">
                                             </div>
                                             <div class="tp-testimonial-author-text">
-                                                <h4 class="tp-testimonial-author-text-name heading-color-black">Jhon Doe</h4>
-                                                <span class="tp-testimonial-author-text-designation">Chief Web Developer</span>
+                                                <h4 class="tp-testimonial-author-text-name heading-color-black">Elvis Okoro</h4>
+                                                <span class="tp-testimonial-author-text-designation">Mobile App Dev Genesys</span>
                                             </div>
                                         </div>
                                         <div class="tp-testimonial-qoute">
@@ -406,15 +279,14 @@ require_once 'superadmin/MYSQLi/wbtml.php';
                                         </div>
                                     </div>
                                     <div class="tp-testimonial-single swiper-slide z-index">
-                                        <p class="mb-45">Erat dapibus interdum consequat eleifend. Porttitor iaculis per lectus ornare dolor pede. Metus urna faucibus montes duis conds imentum congue. Accumsan bibendum pharetra a quisque nulla dictumst quam praesent pharetra
-                                            cos aptent sociosqu. Imperdiet mattis sociosqu differ frome aliquam.</p>
+                                        <p class="mb-45">Enugu State Government in Science and Technology is building the next generation of science and Technology individuals in the future to enhance world best technology</p>
                                         <div class="tp-testimonial-author">
                                             <div class="tp-testimonial-author-img">
-                                                <img src="assets/img/testimonial/testimonial-author-3.jpg" class="img-fluid" alt="img not found">
+                                                <img src="assets/img/testimonial/stephanie-liverani-Zz5LQe-VSMY-unsplash.jpg" class="img-fluid" alt="img not found">
                                             </div>
                                             <div class="tp-testimonial-author-text">
                                                 <h4 class="tp-testimonial-author-text-name heading-color-black">Shon Toy</h4>
-                                                <span class="tp-testimonial-author-text-designation">Chief Marketing Officer</span>
+                                                <span class="tp-testimonial-author-text-designation">Special Assistant, MTN, Enugu State</span>
                                             </div>
                                         </div>
                                         <div class="tp-testimonial-qoute">

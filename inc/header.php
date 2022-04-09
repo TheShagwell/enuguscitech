@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="tp-header-top-info-single">
                                     <div class="tp-header-top-info-single-btn">
-                                        <a href="contact" class="yellow-btn"><i class="flaticon-enter"></i> Free Quote</a>
+                                        <a href="contact" class="yellow-btn"><i class="flaticon-enter"></i>Get Connected</a>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                                                 <a href="index" class="<?php if ($page === "home") : echo "active"; endif; ?>">Home</a>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="" class="<?php if ($page === "about") : echo "active"; endif; ?>">About</a>
+                                                <a href="about" class="<?php if ($page === "about") : echo "active"; endif; ?>">About</a>
                                             </li>
                                             <li><a href="events" class="<?php if ($page === "events") : echo "active"; endif; ?>">Events</a></li>
                                             <li class="menu-item-has-children">
@@ -140,7 +140,7 @@
                         </div>
                         <div class="col-xl-2 tp-sticky-column-btn">
                             <div class="tp-sticky-btn text-end">
-                                <a href="contact" class="theme-btn justify-content-end"><i class="flaticon-enter"></i> Free Quote</a>
+                                <a href="contact" class="theme-btn justify-content-end">  Get Connected</a>
                             </div>
                         </div>
                     </div>

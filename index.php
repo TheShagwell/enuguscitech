@@ -9,7 +9,7 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
                 <div class="tp-single-slider-three tp-slider-height-three d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                     <div class="slide-bg" data-background="assets/img/slider/slider-bg-3.jpg"></div>
                     <div class="slider-img-three">
-                        <img src="assets/img/slider/naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg" style="width: 1018x; height: 850px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
+                        <img src="assets/img/slider/GOV_1018.png" style="width: 1018x; height: 850px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -18,7 +18,7 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
                                     <h6 class="tp-slider-three-subtitle" data-animation="fadeInUp" data-delay=".3s"><img src="assets/img/icon/slider-icon-1.png" class="img-fluid" alt="img not found"> Science and Technology Initiative</h6>
                                     <h1 class="tp-slider-three-title" data-animation="fadeInUp" data-delay=".6s">Education, <br>Programming <br>Guaranteed!</h1>
                                     <div class="tp-slider-three-btn" data-animation="fadeInUp" data-delay=".9s">
-                                        <a href="about" class="yellow-btn"><i class="flaticon-enter"></i> Learn More</a>
+                                        <a href="contact" class="yellow-btn"><i class="flaticon-enter"></i>Get Started</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,8 +65,8 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
                             </div> -->
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev slide-prev"><i class="far fa-long-arrow-left"></i></div>
-                        <div class="swiper-button-next slide-next"><i class="far fa-long-arrow-right"></i></div>
+            <!-- <div class="swiper-button-prev slide-prev"><i class="far fa-long-arrow-left"></i></div>
+                        <div class="swiper-button-next slide-next"><i class="far fa-long-arrow-right"></i></div> -->
         </div>
     </section>
     <!-- hero area end here -->

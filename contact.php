@@ -1,18 +1,18 @@
 <?php require_once './inc/header.php'; ?>
 <main>
     <!-- breadcrumb area start -->
-    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/breadcrumb-bg-1.jpg">
+    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/GovenorUgwanyi.png" style="background-image: url('assets/img/slider/GovenorUgwanyi.png) width: max-content;">
         <div class="tp-custom-container">
             <div class="row">
                 <div class="col-12">
                     <div class="tp-page-title z-index">
-                        <h2 class="breadcrumb-title">Free <span>Contact</span></h2>
+                        <h2 class="breadcrumb-title text-light">Free <span>Contact</span></h2>
                         <div class="breadcrumb-menu">
                             <nav class="breadcrumb-trail breadcrumbs">
                                 <ul class="trail-items">
-                                    <li class="trail-item trail-begin"><a href="index.html">Home</a>
+                                    <li class="trail-item trail-begin"><a href="index.html" style="color: #f7f7f7;">Home</a>
                                     </li>
-                                    <li class="trail-item trail-end"><span>Contact us</span></li>
+                                    <li class="trail-item trail-end"><span style="color: #f7f7f7;">Contact us</span></li>
                                 </ul>
                             </nav>
                         </div>
