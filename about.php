@@ -172,7 +172,7 @@ require_once 'superadmin/MYSQLi/wbtml.php';
             <div class="row align-items-end">
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="tp-about-faq-img">
-                        <img src="assets/img/feature/faq-img-2.png" alt="img not found">
+                        <img src="assets/img/testimonial/faq (1).jpg" alt="img not found">
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2">
@@ -230,14 +230,14 @@ require_once 'superadmin/MYSQLi/wbtml.php';
 
 
     <!-- testimonial area start here -->
-    <section class="tp-testimonial-area position-relative">
+    <section class="tp-testimonial-area position-relative pt-120">
         <div class="tp-testimonial-shape tp-about-testimonial-shape"></div>
         <div class="container">
             <div class="tp-testimonial-bg white-bg z-index">
                 <div class="row align-items-center">
                     <div class="col-xl-5 col-lg-6">
                         <div class="tp-testimonial-img">
-                            <img src="assets/img/testimonial/testimonial-img-3.jpg" alt="img not found">
+                            <img src="assets/img/testimonial/testimonial (1).jpg" alt="img not found">
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-6">
@@ -308,34 +308,6 @@ require_once 'superadmin/MYSQLi/wbtml.php';
     </section>
     <!-- testimonial area end here -->
 
-    <!-- brand area start here -->
-    <div class="brand-area pt-120 pb-120">
-        <div class="container">
-            <div class="brand-active-two swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".3s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-6.png" class="img-fluid" alt="img"></a>
-                    </div>
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".6s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-7.png" class="img-fluid" alt="img"></a>
-                    </div>
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay=".9s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-8.png" class="img-fluid" alt="img"></a>
-                    </div>
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.2s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-9.png" class="img-fluid" alt="img"></a>
-                    </div>
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.5s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-6.png" class="img-fluid" alt="img"></a>
-                    </div>
-                    <div class="brand-wrapper-two text-center swiper-slide wow fadeInUp" data-wow-delay="1.8s" data-swiper-autoplay="5000">
-                        <a href="#"><img src="assets/img/brand/brand-7.png" class="img-fluid" alt="img"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- brand area end here -->
 
 </main>
 
