@@ -21,25 +21,6 @@ document.getElementById('footersubscribe').addEventListener('submit', (e) => {
     })
 })
 
-document.getElementById('contact').addEventListener('submit', (e) => {
-    e.preventDefault()
-    
-    const form = new FormData(e.currentTarget)
-    form.append('submit', '')
-    
-    fetch('superadmin/api/add.php?type=contact', {
-        method: 'POST',
-        body: form
-    }).then(e => e.text()).then(e => {
-        if (e == true) {
-            alert('Your message have been delivered successfully!')
-            document.getElementById('contact').reset()
-        } else {
-            alert('Failed to deliver message!')
-        }
-    })
-})
-
 document.getElementById('appointment').addEventListener('submit', (e) => {
     e.preventDefault()
     
