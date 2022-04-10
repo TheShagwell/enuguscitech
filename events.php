@@ -3,7 +3,7 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
 
 <main>
     <!-- breadcrumb area start -->
-    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/slider/GovenorUgwanyi.png" style="background-image: url('assets/img/slider/GovenorUgwanyi.png) width: max-content;">
+    <div class="tp-page-title-area pt-180 pb-185 position-relative fix" data-background="assets/img/SA.png" style="background-image: url('assets/img/SA.png) width: max-content;">
         <div class="tp-custom-container">
             <div class="row">
                 <div class="col-12">

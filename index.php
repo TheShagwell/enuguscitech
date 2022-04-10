@@ -9,7 +9,7 @@ require_once 'superadmin/MYSQLi/wbtml.php'; ?>
                 <div class="tp-single-slider-three tp-slider-height-three d-flex align-items-center swiper-slide" data-swiper-autoplay="5000">
                     <div class="slide-bg" data-background="assets/img/slider/slider-bg-3.jpg"></div>
                     <div class="slider-img-three">
-                        <img src="assets/img/slider/GOV_1018.png" style="width: 1018x; height: 850px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
+                        <img src="assets/img/SA.png" style="width: 1018x; height: 850px; object-fit: cover;" class="img-fluid tp-about-img-three-second" alt="img-not-found">
                     </div>
                     <div class="container">
                         <div class="row">
