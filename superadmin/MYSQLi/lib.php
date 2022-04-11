@@ -61,14 +61,23 @@ function REDIRECT($url = null) {
 }
 
 function ACCESS($user = null, $url = null) {
-    if ($user != null && $url != null) {
-        if (!isset($user)) {
-            REDIRECT($url);
-        }
-    } else {
-        echo ERROR("Provide accurate arguments for ACCESS");
+    if (!isset($user)) {
+        REDIRECT($url);
     }
+}
 
+function FETCH_ASSOC_QUERY($query) {
+    global $link;
+
+    $fQuery = $query;
+    $fExecute = mysqli_query($link, $fQuery);
+
+    if (mysqli_num_rows($fExecute) > 0) {
+        $rows = mysqli_fetch_assoc($fExecute);
+        return $rows;
+    } else {
+        return false;
+    }
 }
 
 function EXECUTE_QUERY($query) {
@@ -214,9 +223,9 @@ function DECRYPT($old_data, $new_data) {
     $new_data = "514318251620" . $new_data;
 
     if ($new_data != $old_data) {
-        return "false";
+        return false;
     } else {
-        return "true";
+        return true;
     }
 }
 
@@ -397,6 +406,11 @@ function GET_SESSION($session_name) {
     } else {
         return $_SESSION[$session_name];
     }
+}
+
+function LOGOUT($url) {
+    session_destroy();
+    REDIRECT($url);
 }
 
 // function INSERT($table = null, $col = null, $val = null) {

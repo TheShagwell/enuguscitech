@@ -1,6 +1,8 @@
 <?php
-
 require_once 'MYSQLi/wbtml.php';
+$admin = $_SESSION['admin'];
+
+ACCESS($admin, "login");
 
 ?>
 

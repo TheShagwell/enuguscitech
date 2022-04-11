@@ -1,3 +1,11 @@
+<?php
+    $id = $_SESSION['admin'];
+
+    $admin_details = FETCH_ASSOC_QUERY(SELECT_WHERE("admins", "admin_id", $id));
+    extract($admin_details);
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -140,7 +148,7 @@
                 <div class="js-sidebar-scroll">
                     <!-- Side Actions -->
                     <div class="content-side smini-hide">
-                        <a class="btn btn-primary btn-rounded btn-block" href="javascript:void(0)">
+                        <a class="btn btn-primary btn-rounded btn-block" href="./add">
                             <i class="fa fa-plus mr-1"></i> Add Admin
                         </a>
                     </div>
@@ -258,19 +266,15 @@
                                     <span class="nav-main-link-name">Profile</span>
                                 </a>
                                 <ul class="nav-main-submenu">
+
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="">
-                                            <span class="nav-main-link-name">View profile</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-main-item">
-                                        <a class="nav-main-link" href="">
+                                        <a class="nav-main-link" href="./settings">
                                             <span class="nav-main-link-name">Settings</span>
                                         </a>
                                     </li>
                                     
                                     <li class="nav-main-item">
-                                        <a class="nav-main-link" href="">
+                                        <a class="nav-main-link" href="./logout">
                                             <span class="nav-main-link-name">Logout</span>
                                         </a>
                                     </li>
@@ -326,37 +330,32 @@
                         <!-- User Dropdown -->
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn btn-dual" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="d-none d-lg-inline mx-1">mattd@example.com</span>
-                                <span class="badge badge-pill badge-success">PRO</span>
+                                <span class="d-none d-lg-inline mx-1"><?= $email; ?></span>
+                                <span class="badge badge-pill badge-success">ADMIN</span>
                                 <i class="fa fa-fw fa-angle-down ml-1"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg p-0" aria-labelledby="page-header-user-dropdown">
                                 <div class="bg-primary rounded-top font-w600 text-white text-center p-3">
                                     <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar16.jpg" alt="">
                                     <div class="pt-2">
-                                        <a class="text-white font-w600" href="be_pages_generic_profile.html">Matt Doe</a>
+                                        <a class="text-white font-w600" href="be_pages_generic_profile.html"><?= $fullname; ?></a>
                                     </div>
                                 </div>
                                 <div class="p-2">
                                     <div class="row no-gutters">
                                         <div class="col-6 pr-2 border-right">
-                                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
-                                                Profile
-                                                <i class="fa fa-fw fa-user text-black-50 ml-1"></i>
+                                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="./settings">
+                                                Settings
+                                                <i class="fa fa-fw fa-cog text-black-50 ml-1"></i>
                                             </a>
                                         </div>
                                         <div class="col-6 pl-2">
-                                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
-                                                Settings
-                                                <i class="fa fa-fw fa-server text-black-50 ml-1"></i>
+                                            <a class="dropdown-item d-flex justify-content-between align-items-center" href="./logout">
+                                                Sign Out
+                                                <i class="fa fa-fw fa-sign-out-alt text-danger ml-1"></i>
                                             </a>
                                         </div>
                                     </div>
-                                    <div role="separator" class="dropdown-divider"></div>
-                                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="op_auth_signin.html">
-                                        Sign Out
-                                        <i class="fa fa-fw fa-sign-out-alt text-danger ml-1"></i>
-                                    </a>
                                 </div>
                             </div>
                         </div>

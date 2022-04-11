@@ -42,14 +42,14 @@ require_once 'MYSQLi/wbtml.php';
                                 <div class="block-content block-content-full border-left border-3x border-warning">
                                     <div class="d-md-flex justify-content-md-between align-items-md-center">
                                         <div class="p-1 p-md-3">
-                                            <h3 class="h4 font-w700 mb-1"><?= $email; ?></h3>
+                                            <h3 id="email" class="h4 font-w700 mb-1"><?= $email; ?></h3>
                                             <p class="font-size-sm text-muted mb-0">
                                             Date: <i><?= HUMAN_DATE($created_at); ?></i>
                                             </p>
                                         </div>
                                         <div class="p-1 p-md-3">
                                                 
-                                            <a class="btn btn-sm btn-alt-warning btn-rounded px-3 my-1" data-id="<?= $id; ?>" onclick="alert('Copied')">
+                                            <a class="btn btn-sm btn-alt-warning btn-rounded px-3 my-1" data-email="<?= $email; ?>" onclick="copyEmail(this)">
                                                 <i class="fa fa-copy mr-1"></i> Copy
                                             </a>
                                         </div>
@@ -111,7 +111,6 @@ require_once 'MYSQLi/wbtml.php';
             webpack is putting everything together at assets/_js/main/app.js
         -->
         <script src="assets/js/dashmix.app.min.js"></script>
-        <script src="./js/add.js"></script>
-        <script src="./js/actions.js"></script>
+        <script src="./js/copy.js"></script>
     </body>
 </html>

@@ -1,6 +1,54 @@
 <?php
 require_once '../MYSQLi/wbtml.php';
 
+if ($_GET['type'] == 'login') {
+
+    extract($_POST);
+    
+    //= Sanitizing inputs
+    $email = ALLOW_SAFE_SYMBOLS(SANITIZE(CHECK_INPUT($email)));
+    $password = ALLOW_SAFE_SYMBOLS(SANITIZE(CHECK_INPUT($password)));
+
+
+    $sql = "SELECT * FROM admins WHERE email = '$email'";
+    $result = FETCH_ASSOC_QUERY($sql);
+
+    if ($result) {
+        $pwdInDb = $result['password'];
+        $admin_id = $result['admin_id'];
+
+        if (DECRYPT($pwdInDb, $password)) {
+            $_SESSION['admin'] = $admin_id;
+            echo true;
+        } else {
+            echo "Invalid Credentials";
+        }
+    } else {
+        echo false;
+    }
+}
+
+if ($_GET['type'] == 'addForm') {
+
+    extract($_POST);
+    
+    //= Sanitizing inputs
+    $fullname = ALLOW_SAFE_SYMBOLS(SANITIZE(CHECK_INPUT($fullname)));
+    $email = ALLOW_SAFE_SYMBOLS(SANITIZE(CHECK_INPUT($email)));
+    $password = ALLOW_SAFE_SYMBOLS(SANITIZE(CHECK_INPUT($password)));
+    $password = ENCRYPT($password);
+
+
+    $sql = "INSERT INTO admins (fullname, email, password) VALUES ('$fullname', '$email', '$password')";
+    $result = VALIDATE_QUERY($sql);
+
+    if ($result) {
+        echo true;
+    } else {
+        echo false;
+    }
+}
+
 if ($_GET['type'] == 'event') {
 
     extract($_POST);
@@ -138,6 +186,26 @@ if ($_GET['type'] == 'editarticle') {
     move_uploaded_file($image_tmp, "../../assets/img/$imagee");
 
     $sql = "UPDATE articles SET article_title = '$title', article_desc = '$desc', article_image = '$imagee' WHERE article_id = '$id'";
+
+    $result = VALIDATE_QUERY($sql);
+
+    if ($result) {
+        echo true;
+    } else {
+        echo false;
+    }
+}
+
+if ($_GET['type'] == 'editprofile') {
+
+    extract($_POST);
+    
+    //= Sanitizing inputs
+    $fullname = ALLOW_SAFE_SYMBOLS(SANITIZE($fullname));
+    $email = ALLOW_SAFE_SYMBOLS(SANITIZE($email));
+
+
+    $sql = "UPDATE admins SET fullname = '$fullname', email = '$email' WHERE admin_id = '$id'";
 
     $result = VALIDATE_QUERY($sql);
 
